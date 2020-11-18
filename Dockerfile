@@ -1,4 +1,5 @@
-FROM ubuntu
+FROM ubuntu:18.04
+# 18.04 is the last LTS version with Revelation in its archive
 
 LABEL maintainer="Toni Corvera <outlyer@gmail.com>"
 
