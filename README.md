@@ -30,6 +30,10 @@ Uninstall with:
 
 `$ sudo ./revelation-docker.mk uninstall`
 
+### Open file automatically
+
+`$ ./revelation-docker.mk FILE=passwords.revelation`
+
 ## Building the image for other architectures
 
 As of this writing Docker Hub only contains an `amd64` image, for other architectures you'll have to build a local image:

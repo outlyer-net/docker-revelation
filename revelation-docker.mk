@@ -8,6 +8,9 @@ DESTDIR:=
 prefix:=/usr/local
 bindir:=$(prefix)/bin
 
+# Command-line parameters
+FILE:=
+
 launch:
 	@# Possibly useful additional arguments
 	@#	--user $(shell id -u):$(shell id -g) \ 
@@ -21,7 +24,8 @@ launch:
 		--workdir $(HOME) \
 		--user $(shell id -u):$(shell id -g) \
 		-e DISPLAY \
-		$(IMAGE_NAME):$(TAG)
+		$(IMAGE_NAME):$(TAG) \
+		$(FILE)
 
 build:
 	docker build -t $(IMAGE_NAME):$(TAG) .
